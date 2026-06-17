@@ -2,10 +2,10 @@
 - name: Extract address
   ansible.builtin.set_fact:
     address: >-
-      {%- if item.access_ipv4 -%}
-      {{ item.access_ipv4 }}
-      {%- elif item.access_ipv6 -%}
+      {%- if item.access_ipv6 -%}
       {{ item.access_ipv6 }}
+      {%- elif item.access_ipv4 -%}
+      {{ item.access_ipv4 }}
       {%- else -%}
       {%- for int in item.addresses[item.metadata.get('network', 'public')] -%}
       {%- if int['OS-EXT-IPS:type'] == 'floating' -%}
