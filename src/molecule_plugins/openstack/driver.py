@@ -26,6 +26,7 @@ class Openstack(Driver):
           - name: instance-1
             flavor: m1.small
             image: Ubuntu_20.04
+            availability_zone: nova
             user: ubuntu
             floating_ip_pools: # mutually exclusive with auto_ip
               - 1.2.3.4

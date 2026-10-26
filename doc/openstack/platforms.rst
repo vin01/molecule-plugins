@@ -15,6 +15,8 @@ Platform Arguments
 =============================== ===============================================
 description                     Set description for instance, \
                                 default = 'Molecule test instance'
+availability_zone               Availability zone to boot instance in, \
+                                default = omit
 flavor                          Set flavor for instance
 image                           Set instance image
 network                         Mapping of network settings (optional)
